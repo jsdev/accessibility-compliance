@@ -1,0 +1,20 @@
+export const suggestExtension = (extensions, invalidExtension) => {
+  let maxCount = 0;
+  let suggestions = [];
+  for (let i = 0; i < extensions.length; i++) {
+    const extension = extensions[i];
+    let count = 0;
+    for (let j = 0; j < invalidExtension.length; j++) {
+      if (extension.includes(invalidExtension[j])) {
+        count++;
+      }
+    }
+    if (count > maxCount) {
+      maxCount = count;
+      suggestions = [extension];
+    } else if (count === maxCount) {
+      suggestions.push(extension);
+    }
+  }
+  return suggestions;
+}
