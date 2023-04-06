@@ -10,3 +10,13 @@ so I created a shell script that creates an html file that has a summary of your
 - It checks if you include default width and height to render images as faster and conver aspect ratio
 - It checks if you fat fingered your filename extension and if so makes suggestion
 
+## Methods
+
+### suggestExtensions
+```javascript
+const extensions = ['webp', 'png', 'bmp', 'jpg']; // <- short simple list for example purposes
+console.log(suggestExtension(extensions, 'jng')); // ['png', 'jpg']
+console.log(suggestExtension(extensions, 'wtf')); // ['webp]
+console.log(suggestExtension(extensions, 'aaa')); // []
+```
+
