@@ -1,6 +1,6 @@
-#Methods
+# Methods
 
-##suggestExtensions
+## suggestExtensions
 ```javascript
 const extensions = ['webp', 'png', 'bmp', 'jpg'];
 console.log(suggestExtension(extensions, 'jng')); // ['png', 'jpg']
